@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #f5f0e8;
+  --gold: #c9a962;
+  --gold-light: #d4bc82;
+  --gold-dark: #a88b4a;
+  --charcoal: #2c2c2c;
+  --marble: #fafaf8;
+  --deep-black: #1a1a1a;
+  --beige: #d4c4b0;
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-charcoal: var(--charcoal);
+  --color-marble: var(--marble);
+  --color-deep-black: var(--deep-black);
+  --color-beige: var(--beige);
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-jost);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--marble);
+  color: var(--charcoal);
+  font-family: var(--font-jost), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--gold) 30%, transparent);
+}
+
+.font-serif {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+/* Embla carousel */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+/* Mobile sticky bar padding */
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-right: 4rem;
+  }
+}
