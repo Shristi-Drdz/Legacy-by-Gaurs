@@ -11,7 +11,7 @@ jobs:
       test: 'test the variable'
     steps:
       - run: "echo $test"
-      - run: "sudo apt inatsall nodejs && apt install npm"
+      - run: "sudo apt install nodejs && apt install npm"
       - uses: actions/checkout@v3
       
 
