@@ -1,0 +1,16 @@
+name: testing_workflow
+
+on:
+  push:
+      branches: ['main']
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    env:
+      test: 'test the variable'
+    steps:
+      - run: "echo $test"
+
+
