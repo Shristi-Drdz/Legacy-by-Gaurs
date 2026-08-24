@@ -16,8 +16,8 @@ jobs:
       - name: "print working directory"
         run: "ls -al"
       - name: "build application "
-        run: "npm run build"
-        run: "npm run start"  
+        run: "npm run build && npm run start"
+        
       
 
 
